@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soluciones · FinePrint</title>
+<meta name="description" content="Un panel para ver y gestionar los datos que las empresas tienen de ti, e identidades desechables para registrarte sin entregar tus datos reales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><i>Fine</i>Print</a>
+    <nav>
+      <a href="soluciones.html" aria-current="page"><u>Soluciones</u></a>
+      <a href="informacion.html">Información</a>
+      <a class="btn" href="index.html#lista">Acceso anticipado</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="page-hero">
+  <div class="wrap">
+    <span class="tag">Soluciones</span>
+    <h1>Todo lo que saben de ti, en un solo panel.</h1>
+    <p>Dos herramientas: una para ver y exigir lo que ya tienen, y otra para que de ahora en adelante entregues menos.</p>
+  </div>
+</div>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="m">1. Panel de datos personales</h2>
+      <p>Cada empresa que guarda información tuya, qué guarda y qué puedes hacer al respecto. Tú eliges la acción y nosotros enviamos la solicitud y vigilamos la respuesta.</p>
+    </div>
+    <span class="demo-note">Demostración con datos ficticios</span>
+    <div class="dash">
+      <div class="dash-top">
+        <div class="stats">
+          <div><b id="s-emp">0</b><span>empresas con tus datos</span></div>
+          <div><b id="s-sol">0</b><span>solicitudes en curso</span></div>
+          <div><b id="s-dat">0</b><span>tipos de dato expuestos</span></div>
+        </div>
+        <div class="tabs" role="group" aria-label="Filtrar">
+          <button type="button" data-f="all" aria-pressed="true">Todas</button>
+          <button type="button" data-f="open" aria-pressed="false">Con solicitud</button>
+          <button type="button" data-f="none" aria-pressed="false">Sin gestionar</button>
+        </div>
+      </div>
+      <div id="rows"></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="m">2. Identidades desechables</h2>
+      <p>Para registrarte en una página o app sin dejar tus datos reales. Cada sitio recibe una identidad distinta y puedes generar todas las que necesites, así nadie puede cruzar tus cuentas.</p>
+    </div>
+    <div class="ident">
+      <div class="idcard" style="color:var(--bar)">
+        <label class="site" for="site">¿Para qué sitio o app es?</label>
+        <input class="site" id="site" type="text" placeholder="Ej: tienda-zapatos.cl">
+        <div class="field"><span>Nombre</span><output id="f-name"></output><button class="cp" type="button" data-c="f-name">Copiar</button></div>
+        <div class="field"><span>Correo</span><output id="f-mail"></output><button class="cp" type="button" data-c="f-mail">Copiar</button></div>
+        <div class="field"><span>Teléfono</span><output id="f-tel"></output><button class="cp" type="button" data-c="f-tel">Copiar</button></div>
+        <div class="field"><span>RUT de relleno</span><output id="f-rut"></output><button class="cp" type="button" data-c="f-rut">Copiar</button></div>
+        <div class="row-btns">
+          <button class="btn" type="button" id="save">Guardar para este sitio</button>
+          <button class="btn alt" type="button" id="regen">Generar otra</button>
+        </div>
+        <p class="legal">El RUT de relleno sirve solo en formularios que no verifican identidad. No lo uses en bancos, contratos ni trámites con el Estado: ahí corresponde tu RUT real.</p>
+      </div>
+      <div>
+        <h3 style="font-size:34px">Tus identidades</h3>
+        <ul class="saved" id="saved"><li><span style="color:#B4BBC7">Aún no guardas ninguna. Escribe un sitio y guarda la primera.</span></li></ul>
+        <ul class="how">
+          <li><b>Correo con reenvío</b>Los mensajes llegan a tu bandeja. Si el sitio empieza a mandarte spam, apagas ese alias y se acabó.</li>
+          <li><b>Número virtual</b>Recibe los códigos SMS de verificación sin exponer tu número real.</li>
+          <li><b>Datos de relleno</b>Nombre y RUT ficticios para los formularios que los exigen sin validarlos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Pruébalo con tus datos reales.</h2>
+    <p>Estamos abriendo el acceso por tandas. Anótate y te avisamos.</p>
+    <p style="margin-top:34px"><a class="btn" style="background:var(--bar)" href="index.html#lista">Unirme a la lista</a></p>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 FinePrint</span><span><a href="index.html">Inicio</a> · <a href="informacion.html">Información</a></span></div></footer>
+
+<script>
+(function(){
+  var DATA=[
+    {n:'Tienda Alfa',c:'Retail',d:['Nombre','RUT','Dirección','Historial de compras'],r:1},
+    {n:'Banco Beta',c:'Finanzas',d:['Correo','Teléfono','Ingresos declarados'],r:1},
+    {n:'App Gamma',c:'Delivery',d:['Ubicación en tiempo real','Lista de contactos'],r:1},
+    {n:'Red Social Delta',c:'Redes sociales',d:['Fotos','Intereses','Publicaciones'],r:0},
+    {n:'Aseguradora Épsilon',c:'Seguros',d:['Salud declarada','Vehículos'],r:1},
+    {n:'Newsletter Zeta',c:'Marketing',d:['Correo'],r:0}
+  ];
+  var LABEL={acceso:'Acceso solicitado',corregir:'Corrección solicitada',borrar:'Borrado solicitado',limitar:'Uso limitado solicitado'};
+  var filter='all',rows=document.getElementById('rows');
+  function render(){
+    var html='',open=0,tipos=0;
+    DATA.forEach(function(x,i){
+      tipos+=x.d.length; if(x.s)open++;
+      if(filter==='open'&&!x.s)return; if(filter==='none'&&x.s)return;
+      html+='<div class="drow"><div class="'+(x.r?'risk-hi':'')+'"><h3>'+x.n+'</h3><small>'+x.c+(x.r?' · datos sensibles':'')+'</small></div>'+
+        '<div class="data">'+x.d.join(', ')+'</div>'+
+        '<div>'+(x.s?'<span class="chip open">'+LABEL[x.s]+'</span><small style="display:block;margin-top:4px;color:var(--mute);font-size:13px">Enviada hoy. Seguimos el plazo por ti.</small>':'<span class="chip">Sin gestionar</span>')+'</div>'+
+        '<div class="acts">'+(x.s?'':['acceso:Ver datos','corregir:Corregir','borrar:Borrar','limitar:Limitar'].map(function(a){var p=a.split(':');return '<button class="act" type="button" data-i="'+i+'" data-a="'+p[0]+'">'+p[1]+'</button>'}).join(''))+'</div></div>';
+    });
+    rows.innerHTML=html||'<div class="drow"><span>No hay empresas en esta vista.</span></div>';
+    document.getElementById('s-emp').textContent=DATA.length;
+    document.getElementById('s-sol').textContent=open;
+    document.getElementById('s-dat').textContent=tipos;
+  }
+  rows.addEventListener('click',function(e){
+    var b=e.target.closest('.act'); if(!b)return;
+    DATA[b.dataset.i].s=b.dataset.a; render();
+  });
+  document.querySelectorAll('.tabs button').forEach(function(t){
+    t.addEventListener('click',function(){
+      filter=t.dataset.f;
+      document.querySelectorAll('.tabs button').forEach(function(o){o.setAttribute('aria-pressed',o===t)});
+      render();
+    });
+  });
+  render();
+
+  // Identidades de demostración (generadas en el navegador)
+  var N=['Camila','Matías','Antonia','Benjamín','Valentina','Joaquín','Fernanda','Tomás','Javiera','Vicente','Constanza','Ignacio'];
+  var A=['Soto','Muñoz','Rojas','Díaz','Pérez','Silva','Contreras','Vargas','Fuentes','Araya','Tapia','Reyes'];
+  var W=['nube','roble','faro','cobre','musgo','bruma','tinta','pampa','delta','lince'];
+  function pick(a){return a[Math.floor(Math.random()*a.length)]}
+  function dv(n){var s=0,m=2;while(n>0){s+=(n%10)*m;n=Math.floor(n/10);m=m===7?2:m+1}var r=11-(s%11);return r===11?'0':r===10?'K':String(r)}
+  function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+  function gen(){
+    var n=10000000+Math.floor(Math.random()*15000000),id=Math.random().toString(36).slice(2,6);
+    set('f-name',pick(N)+' '+pick(A)+' '+pick(A));
+    set('f-mail',pick(W)+'-'+id+'@alias.fineprint.example');
+    set('f-tel','+56 9 '+(1000+Math.floor(Math.random()*9000))+' '+(1000+Math.floor(Math.random()*9000)));
+    set('f-rut',fmt(n)+'-'+dv(n));
+  }
+  function set(id,v){document.getElementById(id).textContent=v}
+  function get(id){return document.getElementById(id).textContent}
+  document.getElementById('regen').addEventListener('click',gen);
+  document.querySelectorAll('.cp').forEach(function(b){
+    b.addEventListener('click',function(){
+      try{navigator.clipboard.writeText(get(b.dataset.c));b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1200)}catch(e){}
+    });
+  });
+  var saved=document.getElementById('saved'),first=true;
+  document.getElementById('save').addEventListener('click',function(){
+    var s=document.getElementById('site'),site=s.value.trim();
+    if(!site){s.focus();s.placeholder='Escribe el sitio primero';return}
+    if(first){saved.innerHTML='';first=false}
+    var li=document.createElement('li');
+    li.innerHTML='<div><b></b><small></small></div><button class="act" type="button" style="color:var(--bar);align-self:start">Apagar alias</button>';
+    li.querySelector('b').textContent=site;
+    li.querySelector('small').textContent=get('f-mail')+' · '+get('f-tel');
+    var btn=li.querySelector('button');
+    btn.addEventListener('click',function(){li.firstChild.classList.toggle('off');btn.textContent=li.firstChild.classList.contains('off')?'Reactivar':'Apagar alias'});
+    saved.appendChild(li);
+    s.value='';gen();
+  });
+  gen();
+})();
+</script>
+</body>
+</html>

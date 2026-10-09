@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinePrint · Tus datos. Sin letra chica.</title>
+<meta name="description" content="Mira qué empresas tienen tus datos personales y exige que los corrijan o los borren. FinePrint hace el trámite por ti.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><i>Fine</i>Print</a>
+    <nav>
+      <a href="soluciones.html">Soluciones</a>
+      <a href="informacion.html">Información</a>
+      <a class="btn" href="#lista">Acceso anticipado</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <h1><span>Tus datos.</span><span>Sin <em class="strike" style="font-style:normal">letra</em> chica.</span></h1>
+
+    <div class="hero-grid">
+      <div>
+        <p class="lead">Aceptaste cientos de términos y condiciones sin leerlos. FinePrint te muestra qué empresas tienen tus datos y les exige borrarlos o corregirlos. Nosotros hacemos el trámite.</p>
+        <div class="cta-row">
+          <a class="btn" href="#lista">Quiero entrar</a>
+          <a class="link" href="soluciones.html">Ver el panel</a>
+          <small>Gratis en la fase de prueba</small>
+        </div>
+      </div>
+
+      <div>
+        <article class="doc" aria-label="Documento de ejemplo con datos tachables">
+          <h3>CONDICIONES DE USO, cláusula 14.b<br>(la que nadie lee)</h3>
+          <p>El usuario autoriza a la Empresa a conservar su nombre
+            <button class="redact" type="button" data-real="Camila Rojas Pérez" aria-label="Dato oculto: nombre. Pulsa para exigir borrado">████████████████</button>, su RUT
+            <button class="redact" type="button" data-real="12.345.678-9" aria-label="Dato oculto: RUT. Pulsa para exigir borrado">██████████</button> y su ubicación
+            <button class="redact" type="button" data-real="Av. Providencia 1234" aria-label="Dato oculto: ubicación. Pulsa para exigir borrado">██████████████</button>.</p>
+          <p>Dichos datos podrán compartirse con terceros, junto con el historial de compras
+            <button class="redact" type="button" data-real="412 compras" aria-label="Dato oculto: compras. Pulsa para exigir borrado">████████</button> y la lista de contactos
+            <button class="redact" type="button" data-real="287 contactos" aria-label="Dato oculto: contactos. Pulsa para exigir borrado">████████</button>,
+            por el tiempo que la Empresa estime conveniente.</p>
+          <div class="meter"><span>Datos exigidos para borrado</span><span><span id="n">0</span> / 5</span></div>
+          <div class="stamp" id="stamp" aria-live="polite">LIMPIO</div>
+        </article>
+        <p class="hint">Pulsa las barras negras: así de simple se siente exigir un borrado.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="como" class="dark">
+  <div class="wrap">
+    <h2>Tres pasos para recuperar el control.</h2>
+    <ol class="steps">
+      <li><h3>Encuentra</h3><p>Conectas tu correo y te mostramos las empresas que te escriben, te cobran o te piden datos.</p></li>
+      <li><h3>Decide</h3><p>Ves qué guarda cada una y para qué. Eliges: acceder, corregir, borrar o frenar su publicidad.</p></li>
+      <li><h3>Nosotros gestionamos</h3><p>Enviamos la solicitud a tu nombre, vigilamos el plazo y te avisamos cuando respondan. O cuando no lo hagan.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="derechos" class="form-sec">
+  <div class="wrap">
+    <div class="intro">
+      <h2>Tienes derechos. Marca los que quieras usar.</h2>
+      <p>La ley chilena de protección de datos personales te permite exigir esto a cualquier empresa. Nosotros lo convertimos en un formulario de un clic.</p>
+    </div>
+    <div class="checks">
+      <div><span class="box"></span><h3>Acceso</h3><p>Saber qué datos tuyos tienen y de dónde los sacaron.</p></div>
+      <div><span class="box"></span><h3>Rectificación</h3><p>Corregir lo que esté mal o desactualizado.</p></div>
+      <div><span class="box"></span><h3>Supresión</h3><p>Que los borren cuando ya no corresponda que los tengan.</p></div>
+      <div><span class="box"></span><h3>Oposición</h3><p>Negarte a que los usen, por ejemplo para marketing.</p></div>
+      <div><span class="box"></span><h3>Portabilidad</h3><p>Llevarte tus datos en un formato que otro servicio entienda.</p></div>
+      <div><span class="box"></span><h3>Bloqueo</h3><p>Congelar su uso mientras se resuelve una disputa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contrato" style="padding-top:0">
+  <div class="wrap clauses">
+    <div>
+      <h2>Un contrato que sí querrás leer.</h2>
+      <p style="font-size:20px;color:var(--mute);margin-top:28px;max-width:22em;letter-spacing:-.01em">Un servicio de privacidad que abusa de la privacidad no sirve. Estas son nuestras reglas, completas.</p>
+    </div>
+    <article class="contract">
+      <h3>CONTRATO FINEPRINT<br>(completo, sin letra chica)</h3>
+      <p><b>1</b>Pedimos solo los datos necesarios para identificarte ante cada empresa.</p>
+      <p><b>2</b>No vendemos ni compartimos tu información con fines comerciales.</p>
+      <p><b>3</b>Nada se envía sin tu aprobación.</p>
+      <p><b>4</b>Ves cada solicitud con su fecha, su plazo y la respuesta recibida.</p>
+      <p><b>5</b>Puedes borrar tu cuenta cuando quieras. Sí, también tus datos con nosotros.</p>
+      <div class="sign"><span>Firmado: FinePrint</span><span>Firma: tú, cuando quieras</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="final" id="lista">
+  <div class="wrap">
+    <h2>Lee la letra chica una vez. Después, que se encargue otro.</h2>
+    <p>Preparamos el lanzamiento en Chile. Deja tu correo y te avisamos cuando abramos el acceso.</p>
+    <form id="waitlist">
+      <label for="email" style="position:absolute;left:-9999px">Correo electrónico</label>
+      <input id="email" type="email" placeholder="tu@correo.cl" required autocomplete="email">
+      <button class="btn" type="submit">Avísenme</button>
+    </form>
+    <p id="ok" role="status"></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 FinePrint</span>
+    <span><a href="soluciones.html">Soluciones</a> · <a href="informacion.html">Información</a> · <a href="#">Privacidad</a> · <a href="mailto:hola@fineprint.example">Contacto</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var bars=document.querySelectorAll('.redact'),n=document.getElementById('n'),stamp=document.getElementById('stamp'),count=0;
+  bars.forEach(function(b){
+    b.addEventListener('click',function(){
+      if(b.classList.contains('gone'))return;
+      b.textContent=b.dataset.real;
+      b.classList.add('gone');
+      b.setAttribute('aria-label','Borrado: '+b.dataset.real);
+      count++;n.textContent=count;
+      if(count===bars.length)stamp.classList.add('on');
+    });
+  });
+  document.getElementById('waitlist').addEventListener('submit',function(e){
+    e.preventDefault();
+    // Demostración: conecta aquí tu backend o servicio de correo
+    document.getElementById('ok').textContent='Anotado. Te escribimos apenas abramos.';
+    e.target.reset();
+  });
+})();
+</script>
+</body>
+</html>
